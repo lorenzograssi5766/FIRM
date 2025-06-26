@@ -1,0 +1,26 @@
+reset;
+
+model qq.mod;
+data qq.dat;
+
+option solver cplex;
+
+# Risolve il problema
+solve;
+
+# Mostra le soluzioni
+display x;
+
+# Calcola e visualizza la deviazione standard
+param deviation := sqrt(var);
+display deviation;
+
+
+
+
+
+
+
+
+
+
