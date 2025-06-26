@@ -1,0 +1,25 @@
+data;
+
+set INSTR := US_stocks  Int_stocks  Corp_bnd  Gvnt_bnd  Cash;
+set RISK:= low medium high;
+
+param covariancematrix: US_stocks  Int_stocks  Corp_bnd  Gvnt_bnd  Cash :=
+US_stocks  0.02471184	0.01582493	0.002551025	0.00047690	0.000103437
+Int_stocks 0.01582493	0.02805625	0.001375593	0.00022115	0.000007035
+Corp_bnd   0.00255102	0.00137559	0.004316490	0.00283684	0.000089221
+Gvnt_bnd   0.00047660	0.00022115	0.002836840	0.00239121	0.000092421
+Cash       0.00010344	0.00000703	0.000089221	0.00009242	0.000049000;
+
+param targetR :=
+low 0.8
+medium 0.11
+high 0.13;
+
+param rateofreturn :=
+US_stocks    0.141
+Int_stocks   0.125
+Corp_bnd     0.0924
+Gvnt_bnd     0.0792
+Cash         0.0577;
+
+
